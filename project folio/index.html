@@ -3,236 +3,229 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Triven Singh's Portfolio - Full-Stack Developer</title> <!-- Improved SEO with a more descriptive title -->
-    
-    <!-- Correct FontAwesome Script -->
+    <title>triven-portfolio.com</title>
+    <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/c425e24a8.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/5c2e28ba67.js" crossorigin="anonymous"></script>
-    
-    <!-- Link to external stylesheet -->
-    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- Header Section -->
     <div id="header">
         <div class="container">
             <nav>
-                <!-- Logo -->
-                <img src="image/my/logo.png" class="logo" alt="Triven's Logo">
-                
-                <!-- Navigation Menu -->
+                <img src="image/my/logo.png" class="logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
-                    <li><a href="#services">Services</a></li>
+                    <li><a href="#services">Service</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    
-                    <!-- Close Menu Icon (Mobile) -->
-                    <i class="fas fa-times" onclick="closemenu()"></i>
-                    
-                    <!-- Download CV Button -->
+                    <i class="fas fa-times" onclick="closemenu()" ></i>
                     <a href="image/images/my-cv.pdf" download="" class="btn btn2 bar">Download CV</a>
                 </ul>
+                <i class="fa-solid fa-bars " onclick="openmenu()"></i>
                 
-                <!-- Open Menu Icon (Mobile) -->
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
             </nav>
-
-            <!-- Header Text -->
             <div class="header-text">
                 <p>Full-Stack <i class="fa-solid fa-spider"></i> Developer</p>
                 <h1> Hi, I'm <span>Triven</span> <br> Singh from India</h1>
-            </div>
         </div>
+     </div>
     </div>
+    <!-- ---------------------about----------- -->
 
-    <!-- About Section -->
     <div id="about">
         <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="image/my/silver-coat-removebg-preview.png" alt="Triven wearing a silver coat">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About me</h1>
-                    <p> I'm very passionate about my work,<br> "MCA" Graduate, Tech enthusiast,<br> Creativity is key for me,<br> Strategic thinking for every task.</p>
-                    
-                    <!-- Tab Links -->
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills', event)">Skills</p>
-                        <p class="tab-links" onclick="opentab('Experience', event)">Experience</p>
-                        <p class="tab-links" onclick="opentab('Education', event)">Education</p>
-                    </div>
-
-                    <!-- Tab Contents -->
-                    <div class="tab-contents active-tab" id="skills">
+         <div class="row">
+            <div class="about-col-1">
+                <img src="image/my/silver-coat-removebg-preview.png" alt="">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About me</h1>
+                <p> I,m very passionate about my work,
+                     <br> "MCA" Graduate , i'm Tech enthusiast
+                     ,<br> Creativity is the key for me,<br> strategic thinking for every task</p>
+                     <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('Education')">Education</p>
+                        
+                     </div>
+                     <div class="tab-contents active-tab"  id="skills">
                         <ul>
-                            <li><span>Front-end</span><br>HTML, CSS, JavaScript, React.js</li>
-                            <li><span>Back-end</span><br>Python, Java, DSA, APIs</li>
-                            <li><span>Database</span><br>MySQL, Database Design</li>
+                            <li><span>Front-end</span><br>HTML:CSS:Javascript:React.js</li>
+                            <li><span>Back-end</span><br>Python:Java:DSA:API's</li>
+                            <li><span>Database</span><br>Mysql:Design:</li>
                         </ul>
-                    </div>
-                    <div class="tab-contents" id="Experience">
+                     </div>
+                     <div class="tab-contents"  id="Experience">
                         <ul>
                             <li><span>projects-current</span><br>Not applicable</li>
                             <li><span>company-A-demo</span><br>demo purpose (not applicable)</li>
-                            <li><span>company-B-demo</span><br>Ekart eCommerce</li>
+                            <li><span>coompany-B-demo</span><br> ekart eCommerce</li>
                         </ul>
-                    </div>
-                    <div class="tab-contents" id="Education">
+                     </div>
+                     <div class="tab-contents" id="Education">
                         <ul>
-                            <li><span>Post-Graduation (2022-24)</span><br>MCA with 8.67 CGPA from Rajiv Gandhi Prodyogiki Vishwavidyalaya Bhopal</li>
-                            <li><span>Graduation (2019-22)</span><br>BCA with 83.39% from Barkatullah University Bhopal</li>
-                            <li><span>Schooling</span><br>12th-PCM-CBSE-76% from KVSM (2019) :: 10th-CBSE-8.6 from KVSM (2017)</li>
+                            <li><span>Post-Graduation(2022-24)</span><br>MCA with 8.67 cgpa from Rajiv Gandhi Prodyogiki Vishwavidyalaya Bhopal </li>
+                            <li><span>Graduation(2019-22)</span><br>BCA with 83.39% from Barkatullah University Bhopal</li>
+                            <li><span>Schooling</span><br>12th-PCM-CBSE-76% from KVSM(2019) :: 10th-CBSE-8.6 from KVSM(2017)</li>
                         </ul>
-                    </div>
-                </div>
+                     </div>
+                 </div>
             </div>
+         </div>
         </div>
-    </div>
+   
 
-    <!-- Services Section -->
+    <!-------services------- -->
     <div id="services">
         <div class="container">
-            <h1 class="sub-title">My Projects</h1>
+            <h1 class="sub-title"> My Project</h1>
             <div class="services-list">
                 <div>
-                    <i class="fas fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Creating secure, interactive, and fully responsive websites, fulfilling client perspectives and satisfaction.<br><a href="#">Learn more</a></p>
+                    <i class="fas fa-code"> </i>
+                    <h2>web design</h2>
+                    <p> creating the visual elements and layout of a website
+                        <br> secure ,intractive, and fully Responsive Website ,full fill the client perspective & satisfaction
+                         <a href="#">learn more</a>
+                    </p>
                 </div>
                 <div>
                     <i class="fas fa-crop-alt"></i>
-                    <h2>UX/UI Design</h2>
-                    <p>Adopting a human-centered approach to designing user interfaces to ensure they are both beautiful and intuitive.<br><a href="#">Learn more</a></p>
+                    <h2>UX/UI design</h2>
+                    <p>Provide  adopt a human-centered approach to designing user interfaces. Their primary responsibility is to ensure that the interfaces are both beautiful and 
+                        <br>intuitive (meaning that a person can quickly navigate around them without having to think too hard about what they are doing).
+                         <a href="#">learn more</a>
+                    </p>
                 </div>
                 <div>
                     <i class="fab fa-app-store"></i>
-                    <h2>App Design</h2>
-                    <p>Gathering requirements from business analysts and end users to design functional and engaging applications.<br><a href="#">Learn more</a></p>
+                    <h2>App design</h2>
+                    <p>There are multiple matches for app designer, including an app development tool and a professional who designs apps, 
+                        <br>application designer gathers requirements from business systems analysts and end users.
+                         <a href="#">learn more</a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Portfolio Section -->
-    <div id="portfolio">
-        <div class="container">
-            <h1 class="sub-title">My Work</h1>
-            <div class="work-list">
-                <div class="work">
-                    <img src="image/images/work-1.png" alt="Social media app">
-                    <div class="layer">
-                        <h3>Social Media App</h3>
-                        <p>This app connects you to talented people around the world. Download it from the Play Store.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="image/images/work-2.png" alt="Music media app">
-                    <div class="layer">
-                        <h3>Music Media App</h3>
-                        <p>This app connects you to talented musicians. Download it from the Play Store.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                </div>
-                <div class="work">
-                    <img src="image/images/work-3.png" alt="Online shopping app">
-                    <div class="layer">
-                        <h3>Online Shopping App</h3>
-                        <p>Shop online with ease. Download it from the Play Store.</p>
-                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
-                    </div>
+<!--------------------------portfolio------------------------------->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub title">my work</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="image/images/work-1.png" >
+                <div class="layer">
+                    <h3>social media app</h3>
+                    <p>The app connect you to the talented people around the world. Download it from play store</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
-            <a href="#" class="btn">See more</a>
-        </div>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fas fa-paper-plane"></i> trivendrathakur3001@gmail.com</p>
-                    <p><i class="fa-solid fa-phone"></i> 9874563210</p>
-                    <div class="social-icon">
-                        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-                        <a href="https://instagram.com/mr.triven" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://github.com/mr-triven" target="_blank"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/triventhakur" target="_blank"><i class="fab fa-linkedin"></i></a> <!--  LinkedIn URL -->
-                    </div>
-                    <a href="image/images/my-cv.pdf" download="" class="btn btn2">Download CV</a>
+            <div class="work">
+                <img src="image/images/work-2.png" >
+                <div class="layer">
+                    <h3>music media app</h3>
+                    <p>The app connect you to the talented people around the world. Download it from play store</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
-                
-                <!-- Contact Form -->
-                <div class="contact-right">
-                    <form name="submit-to-google-sheet">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                        <input type="email" name="email" placeholder="Your Email" required>
-                        <textarea name="message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
-                    </form>
-                    <span id="msg"></span>
+            </div>
+            <div class="work">
+                <img src="image/images/work-3.png" >
+                <div class="layer">
+                    <h3>online shopping app</h3>
+                    <p>The app connect you to the talented people around the world. Download it from play store</p>
+                    <a href="#"><i class="fas fa-external-link-alt"></i></a>
                 </div>
             </div>
         </div>
+        <a href="#" class="btn">see more</a>
+    </div>
+</div>
 
-        <!-- Copyright Notice -->
-        <div class="copyright">
-            <p>Copyright @ Triven. Made with <i class="fa-solid fa-heart"></i> by Triven.</p>
+<!-----------------------------------------------contact--------------------------------------------->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">contact me</h1>
+                <p><i class="fas fa-paper-plane"></i> trivendrathakur3001@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i>9874563210</p>
+                <div class="social-icon">
+                    <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="https://instagram.com/mr.triven" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://github.com/mr-triven" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="www.linkedin.com/in/triventhakur" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+                <a href="image/images/my-cv.pdf" download="" class="btn btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form  name="submit-to-google-sheet">
+                    <input type="text" name="name"  placeholder="your name" required>
+                    <input type="email" name="email" placeholder="your email" required id="">
+                    <textarea name="Message" rows="6" placeholder="your Message "></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
         </div>
     </div>
+    <div class="copyright">
+        <p>copyright @ triven. made with <i class="fa-solid fa-heart" ></i> by triven</p>
 
-    <!-- JavaScript Section -->
+    </div>
+</div>
+
     <script>
-        // Mobile menu: Opens the side menu on mobile view
-        var sidemenu = document.getElementById("sidemenu");
 
-        function openmenu() {
-            sidemenu.style.right = "0";  // Bring sidemenu into view
-        }
-
-        function closemenu() {
-            sidemenu.style.right = "-200px";  // Slide sidemenu out of view
-        }
-
-        // Function to open the correct tab in the 'About' section
-        function opentab(tabname, event) {
-            var tablinks = document.getElementsByClassName("tab-links");
-            var tabcontents = document.getElementsByClassName("tab-contents");
-            
-            // Remove active state from all tab links and contents
-            for (let tablink of tablinks) {
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
                 tablink.classList.remove("active-link");
             }
-            for (let tabcontent of tabcontents) {
+            for(tabcontent of tabcontents){
                 tabcontent.classList.remove("active-tab");
+
             }
-            
-            // Add active state to clicked tab
             event.currentTarget.classList.add("active-link");
             document.getElementById(tabname).classList.add("active-tab");
         }
-
-        // Form submission handling
-        const form = document.forms['submit-to-google-sheet'];
-        const msg = document.getElementById("msg");
-        const scriptURL = 'https://script.google.com/macros/s/YOUR_GOOGLE_SCRIPT_URL_HERE/exec';  // Replace with actual Google Script URL
-
-        form.addEventListener('submit', e => {
-            e.preventDefault();
-            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-                .then(response => {
-                    msg.innerHTML = "Form submitted successfully!";  // Success message
-                    setTimeout(() => { msg.innerHTML = ""; }, 5000);  // Clear message after 5 seconds
-                    form.reset();  // Reset form fields
-                })
-                .catch(error => console.error('Error!', error.message));
-        });
     </script>
+    <script>
+        var sidemenu =document.getElementById("sidemenu");
+        function openmenu(){
+
+            sidemenu.style.right = "0";
+        }
+        function closemenu(){
+
+            sidemenu.style.right = "-200px";
+        }
+    </script>
+      
+    <form name="submit-to-google-sheet">
+        <!--<input name="email" type="email" placeholder="Email" required>-->
+       <!-- <button type="submit">Send</button> -->
+      </form>
+      
+      <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbzbdyx_ctQRwwSQdY1IPh4e_Px6jEecaKSdEIftD1hp_M6TPuJYnOgOsN7Yt88WlsGI-g/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+                msg.innerHTML= "gaya form me "
+                setTimeout(function(){
+                    msg.innerHTML = ""
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
 </body>
 </html>
