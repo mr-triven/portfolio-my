@@ -1,0 +1,642 @@
+/* Global Styles */
+* {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    font-family: 'Poppins', sans-serif; /* Set font for the entire page */
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+html {
+    scroll-behavior: auto; /* Default scroll behavior */
+}
+
+body {
+    background-color: #080808; /* Dark background color for the body */
+    color: #fff; /* White text color */
+}
+
+/* Header Styles */
+#header {
+    width: 100%; /* Full width */
+    height: 100vh; /* Full viewport height */
+    background-image: url(image/my/mypng.png); /* Background image */
+    background-size: 48%; /* Background image size */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    background-position: right; /* Position background image to the right */
+}
+
+.container {
+    padding: 10px 5%; /* Container padding */
+}
+
+nav {
+    display: flex; /* Flexbox for navigation */
+    align-items: center; /* Align items vertically center */
+    justify-content: space-between; /* Distribute space between items */
+    flex-wrap: wrap; /* Wrap items to the next line if needed */
+}
+
+.logo {
+    width: 220px; /* Width of the logo */
+}
+
+nav ul {
+    padding-left: 70px; /* Left padding for the navigation list */
+}
+
+nav ul li {
+    display: inline-block; /* Inline-block for list items */
+    list-style: none; /* Remove list bullets */
+    margin: 10px 20px; /* Margin around list items */
+}
+
+nav ul li a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 18px; /* Font size for links */
+    position: relative; /* Relative positioning for pseudo-elements */
+}
+
+nav ul li a::after {
+    content: ''; /* Empty content for the pseudo-element */
+    width: 0%; /* Initial width of the underline */
+    height: 3px; /* Height of the underline */
+    background: #ff004f; /* Color of the underline */
+    position: absolute; /* Absolute positioning for the underline */
+    left: 0; /* Align to the left */
+    bottom: -6px; /* Position below the text */
+    transition: 0.5s; /* Smooth transition for the width */
+}
+
+nav ul li a:hover::after {
+    width: 100%; /* Full width underline on hover */
+}
+
+nav ul i {
+    display: none; /* Hide Font Awesome icons in the navigation list */
+}
+
+nav i {
+    content-visibility: hidden; /* Hide content visibility */
+}
+
+nav a {
+    margin-right: 10px; /* Margin to the right of links */
+}
+
+.header-text {
+    margin-top: 20%; /* Margin from the top for header text */
+    font-size: 30px; /* Font size for header text */
+}
+
+.header-text h1 {
+    font-size: 60px; /* Font size for the main heading */
+    margin-top: 20px; /* Margin above the heading */
+}
+
+.header-text h1 span {
+    color: #ff004f; /* Highlight color for part of the heading text */
+}
+
+/* About Section */
+#about {
+    padding: 80px 0; /* Vertical padding for the about section */
+    color: #ababab; /* Light gray text color */
+}
+
+.row {
+    display: flex; /* Flexbox for layout */
+    justify-content: space-between; /* Space between flex items */
+    flex-wrap: wrap; /* Wrap items to next line */
+}
+
+.about-col-1 {
+    flex-basis: 25%; /* Width of the first column */
+}
+
+.about-col-1 img {
+    width: 100%; /* Full width image */
+    border-radius: 15px; /* Rounded corners for the image */
+}
+
+.about-col-2 {
+    flex-basis: 60%; /* Width of the second column */
+}
+
+.sub-title {
+    font-size: 60px; /* Font size for sub-titles */
+    font-weight: 600; /* Font weight for sub-titles */
+    color: #ababab; /* Light gray color for sub-titles */
+}
+
+.tab-titles {
+    display: flex; /* Flexbox for tab titles */
+    margin: 20px 0 40px; /* Margin for the tab titles */
+}
+
+.tab-links {
+    margin: 50px; /* Margin around tab links */
+    font-size: 18px; /* Font size for tab links */
+    font-weight: 500; /* Font weight for tab links */
+    cursor: pointer; /* Pointer cursor on hover */
+    position: relative; /* Relative positioning for pseudo-elements */
+}
+
+.tab-links::after {
+    content: ''; /* Empty content for the pseudo-element */
+    width: 10px; /* Width of the underline */
+    height: 3px; /* Height of the underline */
+    background: #ff004f; /* Color of the underline */
+    position: absolute; /* Absolute positioning for the underline */
+    left: 0; /* Align to the left */
+    bottom: -8px; /* Position below the text */
+    transition: 0.5s; /* Smooth transition for the width */
+}
+
+.tab-links.active-link::after {
+    width: 50%; /* Width of the underline when active */
+    display: block; /* Display the underline when active */
+}
+
+.tab-contents ul li {
+    list-style: none; /* Remove list bullets */
+    margin: 10px 0; /* Margin around list items */
+    display: flex; /* Flexbox for list items */
+}
+
+.tab-contents ul li span {
+    color: #b54769; /* Color for the span text */
+    font-size: 14px; /* Font size for the span text */
+}
+
+.tab-contents {
+    display: none; /* Hide tab contents by default */
+    font-size: 20%; /* Font size for tab contents */
+}
+
+.tab-contents.active-tab {
+    display: block; /* Show active tab contents */
+    font-size: 20px; /* Font size for active tab contents */
+}
+
+/* Services Section */
+#services {
+    padding: 30px 0; /* Vertical padding for the services section */
+}
+
+.services-list {
+    display: grid; /* Grid layout for services */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+    grid-gap: 40px; /* Gap between grid items */
+    margin-top: 50px; /* Margin above the grid */
+}
+
+.services-list div {
+    background: #262626; /* Dark background for service items */
+    padding: 40px; /* Padding inside service items */
+    font-size: 13px; /* Font size for service descriptions */
+    font-weight: 300; /* Font weight for service descriptions */
+    border-radius: 10px; /* Rounded corners for service items */
+    transition: background 0.5s, transform 0.5s; /* Smooth transition for background and scale */
+}
+
+.services-list div i {
+    font-size: 50px; /* Font size for icons */
+    margin-bottom: 50px; /* Margin below the icon */
+}
+
+.services-list div h2 {
+    font-size: 30px; /* Font size for service titles */
+    font-weight: 500; /* Font weight for service titles */
+    margin-bottom: 15px; /* Margin below the title */
+}
+
+.services-list div a {
+    text-decoration: none; /* Remove underline from links */
+    color: hsl(261, 94%, 48%); /* Color of the link */
+    font-size: 12px; /* Font size for link text */
+    margin-top: 20px; /* Margin above the link */
+    display: inline-block; /* Inline-block display for links */
+}
+
+.services-list div:hover {
+    background-color: #ff004f; /* Background color on hover */
+    transform: scale(1.05); /* Scale up on hover */
+}
+
+/* Portfolio Section */
+#portfolio {
+    padding: 50px; /* Padding for the portfolio section */
+}
+
+.work-list {
+    display: grid; /* Grid layout for portfolio items */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid columns */
+    grid-gap: 40px; /* Gap between grid items */
+    margin-top: 50px; /* Margin above the grid */
+}
+
+.work {
+    border-radius: 10px; /* Rounded corners for portfolio items */
+    position: relative; /* Relative positioning for overlay */
+    overflow: hidden; /* Hide overflow content */
+}
+
+.work img {
+    width: 100%; /* Full width for images */
+    border-radius: 10px; /* Rounded corners for images */
+    display: block; /* Block display for images */
+    transition: transform 0.5s; /* Smooth transition for scaling */
+}
+
+.layer {
+    width: 100%; /* Full width for overlay */
+    height: 0; /* Initial height of overlay */
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #ff004f); /* Gradient background for overlay */
+    border-radius: 10px; /* Rounded corners for overlay */
+    position: absolute; /* Absolute positioning for overlay */
+    left: 0; /* Align to the left */
+    bottom: 0; /* Align to the bottom */
+    overflow: hidden; /* Hide overflow content */
+    display: flex; /* Flexbox for overlay content */
+    align-items: center; /* Vertically center content */
+    justify-content: center; /* Horizontally center content */
+    flex-direction: column; /* Column direction for content */
+    padding: 0 40px; /* Padding inside the overlay */
+    text-align: center; /* Center align text */
+    font-size: 15px; /* Font size for overlay text */
+    transition: height 0.5s; /* Smooth transition for height */
+}
+
+.layer h3 {
+    font-weight: 500; /* Font weight for overlay heading */
+    margin-bottom: 20px; /* Margin below the heading */
+}
+
+.layer a {
+    margin-top: 20px; /* Margin above the link */
+    color: #ff004f; /* Color for the link */
+    text-decoration: none; /* Remove underline from the link */
+    font-size: 18px; /* Font size for the link */
+    line-height: 60px; /* Line height for the link */
+    background: #ababab; /* Background color for the link */
+    width: 60px; /* Width of the link */
+    height: 60px; /* Height of the link */
+    border-radius: 50%; /* Rounded shape for the link */
+    text-align: center; /* Center align text */
+}
+
+.work:hover img {
+    transform: scale(1.1); /* Scale up image on hover */
+}
+
+.work:hover .layer {
+    height: 100%; /* Expand overlay height on hover */
+}
+
+.btn {
+    display: block; /* Block display for buttons */
+    margin: 50px auto; /* Center align and margin around button */
+    width: fit-content; /* Adjust width to content */
+    border: 1px solid #ff004f; /* Border color for button */
+    padding: 14px 50px; /* Padding inside button */
+    border-radius: 6px; /* Rounded corners for button */
+    color: #fff; /* White text color for button */
+    text-decoration: none; /* Remove underline from button link */
+    transition: background 0.5s; /* Smooth transition for background color */
+}
+
+.btn:hover {
+    background-color: #ff004f; /* Background color on hover */
+}
+
+/* Contact Section */
+.contact-left {
+    flex-basis: 35%; /* Width of the left contact column */
+}
+
+.contact-right {
+    flex-basis: 60%; /* Width of the right contact column */
+}
+
+.contact-left p {
+    margin-top: 30px; /* Margin above paragraphs in the left contact column */
+}
+
+.contact-left p i {
+    color: #ff004f; /* Color for icons in contact paragraphs */
+    margin-right: 15px; /* Margin to the right of icons */
+    font-size: 25px; /* Font size for icons */
+}
+
+.social-icon {
+    margin-top: 30px; /* Margin above social icons */
+}
+
+.social-icon a {
+    text-decoration: none; /* Remove underline from social icon links */
+    font-size: 30px; /* Font size for social icons */
+    margin-right: 15px; /* Margin to the right of social icons */
+    color: #ababab; /* Light gray color for social icons */
+    display: inline-block; /* Inline-block display for social icons */
+    transition: transform 0.5s; /* Smooth transition for transform */
+}
+
+.social-icon a:hover {
+    color: #ff004f; /* Color change on hover */
+    transform: translate(-5px); /* Slight move on hover */
+}
+
+.btn.btn2 {
+    display: inline-block; /* Inline-block display for secondary button */
+    background-color: #fd0101; /* Background color for secondary button */
+}
+
+.btn.btn2:hover {
+    color: #080808; /* Text color change on hover */
+}
+
+.contact-right form {
+    width: 100%; /* Full width for the form */
+}
+
+form input,
+form textarea {
+    width: 100%; /* Full width for form inputs and textarea */
+    border: 0; /* Remove border */
+    outline: none; /* Remove outline */
+    background: #262626; /* Dark background for inputs */
+    padding: 15px; /* Padding inside inputs */
+    margin: 15px 0; /* Margin around inputs */
+    color: #fff; /* White text color */
+    font-size: 18px; /* Font size for inputs */
+    border-radius: 6px; /* Rounded corners for inputs */
+}
+
+form .btn2 {
+    padding: 14px; /* Padding inside the secondary button */
+    font-size: 18px; /* Font size for the secondary button */
+    margin-top: 20px; /* Margin above the secondary button */
+    align-items: center; /* Center align items */
+    justify-content: center; /* Center align items */
+    cursor: pointer; /* Pointer cursor for the secondary button */
+}
+
+.copyright {
+    width: 36cm; /* Fixed width for the copyright section */
+    text-decoration: none; /* Remove text decoration */
+    text-align: center !important; /* Center align text */
+    justify-content: center !important; /* Center align content */
+    padding: 20px; /* Padding inside the copyright section */
+    background: #0f0e0e; /* Dark background color */
+    font-weight: 300; /* Font weight for copyright text */
+    margin-top: 20px; /* Margin above the copyright section */
+    -webkit-transition-duration: 10s; /* Transition duration for webkit browsers */
+}
+
+.copyright i {
+    color: #ff004f; /* Color for icon in the copyright section */
+}
+
+/* Responsive Styles */
+nav .fas {
+    display: none; /* Hide Font Awesome icons by default */
+}
+/*------------------------media---------------------*/
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url(image/my/pro-png.png); /* Change background image for small screens */
+        background-position: center; /* Center background image */
+    }
+
+    .header-text {
+        margin-top: 100%; /* Adjust margin for small screens */
+        font-size: 20px; /* Font size for small screens */
+    }
+
+    .header-text h1 {
+        font-size: 50px; /* Font size for the main heading on small screens */
+    }
+
+    nav .fas {
+        display: block; /* Display Font Awesome icons on small screens */
+        font-size: 25px; /* Font size for icons */
+        cursor: pointer; /* Pointer cursor for clickable icons */
+    }
+
+    nav ul {
+        display: block !important; /* Force display block for navigation list */
+        background-color: #ff004f; /* Background color for navigation list */
+        position: fixed; /* Fixed position for the navigation list */
+        top: 0; /* Align to the top */
+        right: -200px; /* Start position off-screen */
+        width: 200px; /* Width of the navigation list */
+        height: 100vh; /* Full viewport height */
+        padding-top: 50px; /* Padding from the top */
+        z-index: 2; /* Ensure it appears above other content */
+        transition: right 0.5s; /* Smooth transition for right position */
+        overflow-y: auto; /* Scroll if content overflows */
+    }
+
+    nav ul.open {
+        right: 0; /* Show navigation list when open */
+    }
+
+    nav ul i {
+        display: block; /* Display Font Awesome icons in the navigation list */
+    }
+
+    nav i {
+        content-visibility: visible; /* Make content visible */
+    }
+
+    nav ul li {
+        display: block !important; /* Block display for list items */
+        margin: 25px; /* Margin around list items */
+        margin-left: 5px; /* Adjust margin-left for list items */
+    }
+    nav ul a:hover {
+        border: #fff 2px dotted; /* Dotted border on hover */
+        border-radius: 25px; /* Rounded border */
+        padding: 5px; /* Padding inside the border */
+    }
+    nav ul .fas {
+        position: absolute; /* Absolute positioning for the close icon */
+        top: 25px; /* Position from the top */
+        left: 25px; /* Position from the left */
+        cursor: pointer; /* Pointer cursor for the close icon */
+    }
+
+    .sub-title {
+        font-size: 40px; /* Font size for sub-titles on small screens */
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%; /* Full width columns on small screens */
+    }
+
+    .about-col-1 {
+        margin-bottom: 30px; /* Margin below the first column */
+    }
+
+    .about-col-2 {
+        font-size: 14px; /* Font size for the second column on small screens */
+    }
+
+    .tab-links {
+        font-size: 16px; /* Font size for tab links on small screens */
+        margin-right: 20px; /* Margin to the right of tab links */
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 100%; /* Full width columns on small screens */
+    }
+
+    .copyright {
+        font-size: 14px; /* Font size for the copyright section on small screens */
+    }
+
+    .download-cv {
+        display: none; /* Hide download CV button on small screens */
+    }
+    .btn.btn2.bar {
+        display: none; /* Hide additional button with .btn2.bar class on small screens */
+    }
+}
+/* Base styles for mobile-first approach */
+
+/* Medium devices (tablets) */
+@media only screen and (min-width: 768px) {
+    /* Adjustments for medium devices */
+    .container {
+        padding: 20px 10%; /* Increased padding for medium devices */
+    }
+
+    .header-text {
+        margin-top: 40%; /* Adjust margin for medium devices */
+        font-size: 25px; /* Adjust font size for header text */
+    }
+
+    .header-text h1 {
+        font-size: 55px; /* Adjust font size for main heading */
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 48%; /* Adjust column width for medium devices */
+    }
+
+    .tab-links {
+        font-size: 17px; /* Adjust font size for tab links */
+        margin-right: 30px; /* Adjust margin for tab links */
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 48%; /* Adjust column width for contact section */
+    }
+
+    .copyright {
+        font-size: 16px; /* Adjust font size for copyright section */
+    }
+
+    .download-cv {
+        display: block; /* Show download CV button for medium devices */
+    }
+
+    .btn.btn2.bar {
+        display: inline-block; /* Show additional button for medium devices */
+    }
+}
+
+/* Large devices (desktops) */
+@media only screen and (min-width: 992px) {
+    /* Adjustments for large devices */
+    .header-text {
+        margin-top: 15%; /* Adjust margin for large devices */
+        font-size: 30px; /* Adjust font size for header text */
+    }
+
+    .header-text h1 {
+        font-size: 60px; /* Adjust font size for main heading */
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 45%; /* Adjust column width for large devices */
+    }
+
+    .tab-links {
+        font-size: 18px; /* Adjust font size for tab links */
+        margin-right: 40px; /* Adjust margin for tab links */
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 48%; /* Adjust column width for contact section */
+    }
+
+    .copyright {
+        font-size: 18px; /* Adjust font size for copyright section */
+    }
+
+    .download-cv {
+        display: block; /* Ensure download CV button is visible */
+    }
+
+    .btn.btn2.bar {
+        display: inline-block; /* Ensure additional button is visible */
+    }
+}
+
+/* Extra large devices (large desktops) */
+@media only screen and (min-width: 1200px) {
+    /* Adjustments for extra large devices */
+    .container {
+        padding: 30px 15%; /* Increase padding for extra large devices */
+    }
+
+    .header-text {
+        margin-top: 10%; /* Adjust margin for extra large devices */
+        font-size: 35px; /* Adjust font size for header text */
+    }
+
+    .header-text h1 {
+        font-size: 70px; /* Adjust font size for main heading */
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 48%; /* Adjust column width for extra large devices */
+    }
+
+    .tab-links {
+        font-size: 19px; /* Adjust font size for tab links */
+        margin-right: 50px; /* Adjust margin for tab links */
+    }
+
+    .contact-left,
+    .contact-right {
+        flex-basis: 48%; /* Adjust column width for contact section */
+    }
+
+    .copyright {
+        font-size: 20px; /* Adjust font size for copyright section */
+    }
+
+    .download-cv {
+        display: block; /* Ensure download CV button is visible */
+    }
+
+    .btn.btn2.bar {
+        display: inline-block; /* Ensure additional button is visible */
+    }
+}
+
+#msg {
+    color: #61b752; /* Color for messages */
+    margin-top: -40px; /* Adjust margin-top for messages */
+    display: block; /* Ensure messages are displayed */
+}
